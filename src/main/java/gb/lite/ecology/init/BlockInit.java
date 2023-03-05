@@ -2,6 +2,7 @@ package gb.lite.ecology.init;
 
 import gb.lite.ecology.EcologyMain;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,7 +20,8 @@ import java.util.function.Supplier;
 public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EcologyMain.MODID);
     public static final RegistryObject<Block> HYDROPONIC_BLOCK = BLOCKS.register("hydroponics_farm",
-            () -> new Block(Block.Properties.of(Material.STONE)));
+            () -> new Block(Block.Properties.of(Material.STONE).requiresCorrectToolForDrops()));
+
 
 
     @SubscribeEvent
