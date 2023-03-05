@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ecologymod:block/hydroponics_farm"
+    }
+  }
+}
